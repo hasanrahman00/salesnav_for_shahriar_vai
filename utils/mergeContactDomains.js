@@ -121,9 +121,7 @@ function pickUnique(arr) {
 function pickWebsiteHeader(headers) {
   const list = Array.isArray(headers) ? headers : [];
   const byLower = new Map(list.map((h) => [String(h).toLowerCase(), h]));
-  // Prefer the new canonical header when present
   if (byLower.has('website')) return byLower.get('website');
-  // Back-compat for older CSVs
   if (byLower.has('domain')) return byLower.get('domain');
   return null;
 }

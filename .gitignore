@@ -1,6 +1,22 @@
 # Dependencies
 node_modules/
 
+# Playwright / browser profiles
+user_data/
+
+# Runtime artifacts / outputs
+data/
+all_jobs/
+
+# Cookies / auth material
+cookies/
+*_cookies.json
+contactout_cookies.json
+signalhire_cookies.json
+contactout_cookies.json
+signalhire_cookies.json
+linkedin_cookies.json
+
 # Logs
 *.log
 
