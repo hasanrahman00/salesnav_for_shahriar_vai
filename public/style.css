@@ -1,0 +1,263 @@
+/* style.css */
+
+
+
+/* Basic styling for the Sales Nav Helper application.  The layout is
+   intentionally simple and uses a vertical stack for the main
+   sections. */
+/* Import DM Sans font (falls back to sans-serif if unavailable) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Soft gradient background for a professional SaaS feel */
+  background: linear-gradient(180deg, #f5f8ff 0%, #eef3fb 35%, #ffffff 100%);
+  color: #333;
+}
+
+/* Footer tagline */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: transparent;
+}
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c7a89;
+  font-style: italic;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #6c7a89;
+  font-weight: normal;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  border: 1px solid #e5e9ec;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Center titles in cookie and scrape sections */
+.cookie-section h3,
+.scrape-section h3 {
+  text-align: center;
+}
+
+/* Arrange cookie buttons side by side with spacing */
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+/* Increase spacing after inputs */
+.scrape-section input {
+  margin-bottom: 16px;
+}
+
+/* Style back buttons on download and jobs pages */
+.section button#backBtn {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Adjust spacing for inputs and labels in the scrape section */
+.scrape-section label {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 500;
+}
+.scrape-section input {
+  margin-bottom: 12px;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccd6dd;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #fafbfc;
+}
+
+.buttons-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #6c63ff 0%, #ab63e7 100%);
+  color: #ffffff;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-message,
+.output-message {
+  margin-top: 8px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  background: #f5f7f9;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #e1e8ed;
+  color: #37474f;
+}
+
+/* File list table columns */
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e9ec;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fafbfc;
+}
+.file-row.file-header {
+  font-weight: bold;
+  background-color: #e9eef5;
+}
+.file-row .file-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+/* Download page file list */
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e9ec;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fafbfc;
+}
+
+.file-row .file-name {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-all;
+}
+
+/* Job list */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.job-row {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e9ec;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fafbfc;
+}
+.job-header {
+  font-weight: bold;
+  background-color: #e9eef5;
+}
+.job-row .job-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+/* Let the Actions column size to its content (no shrinking) */
+.job-row .job-col.job-actions,
+.job-header .job-col.job-actions {
+  flex: 0 0 auto;         /* don't grow, don't shrink, width = auto */
+}
+
+.job-details {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+
+/* Keep the buttons on one line and give them consistent size */
+.job-actions button {
+  white-space: nowrap;    /* prevent "R\nu\nn" wrapping */
+  min-width: 80px;        /* optional: make Run/Stop same width as Delete */
+  padding: 8px 12px;      /* optional: consistent padding */
+}
+
+
+/* Small spacing between buttons (you already have a gap, keep or tweak) */
+.job-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
