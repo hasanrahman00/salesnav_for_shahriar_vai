@@ -1,0 +1,19 @@
+{
+  "name": "sales-nav-helper",
+  "version": "1.0.0",
+  "description": "Sales Navigator helper with Node.js, Express and Playwright",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.0",
+    "csv-stringify": "^6.4.2",
+    "express": "^5.1.0",
+    "free-email-domains": "^1.0.0",
+    "playwright": "^1.55.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

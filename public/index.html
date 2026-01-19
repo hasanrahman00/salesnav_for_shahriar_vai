@@ -1,0 +1,56 @@
+<!-- public/index.html -->
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Sales Nav Scraper</title>
+  <!-- Link to the custom stylesheet.  This file controls the
+       appearance of the application and defines a simple vertical
+       layout. -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sales Nav Scraper</h1>
+    <h2 class="subtitle">Scrape Unlimited Leads&nbsp;||&nbsp;No Daily Limits.</h2>
+  </header>
+
+  <main>
+    <!-- Cookie input section -->
+    <section class="section cookie-section">
+      <h3>Cookies</h3>
+      <textarea id="cookie" rows="6" placeholder="Paste LinkedIn cookie JSON array here"></textarea>
+      <div class="cookie-buttons">
+        <button id="saveBtn">Save Cookie</button>
+        <button id="deleteCookieBtn">Delete</button>
+      </div>
+      <div id="status" class="status-message"></div>
+    </section>
+
+    <!-- Sales Navigator URL section -->
+    <section class="section scrape-section">
+      <h3>Sales Navigator</h3>
+      <label for="listName">List Name</label>
+      <input id="listName" placeholder="e.g. My Leads List" />
+      <label for="url">Sales Nav URL</label>
+      <input id="url" placeholder="https://www.linkedin.com/sales/people/..." />
+      <div class="buttons-row">
+        <button id="runBtn">Run Scraper</button>
+        <button id="stopBtn">Stop</button>
+        <button id="downloadBtn">Download</button>
+        <button id="jobsBtn">All Jobs</button>
+      </div>
+      <div id="out" class="output-message"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="tagline">Extract unlimited number leads without LinkedIn account suspension.</p>
+  </footer>
+
+  <!-- Frontend logic that powers the buttons. -->
+  <script src="app.js"></script>
+</body>
+</html>

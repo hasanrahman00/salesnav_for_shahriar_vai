@@ -1,0 +1,13 @@
+{
+  "id": "sdfwe_20260119_231231",
+  "url": "https://www.linkedin.com/sales/search/people?query=(recentSearchParam%3A(id%3A5172542458%2CdoLogHistory%3Atrue)%2Cfilters%3AList((type%3AINDUSTRY%2Cvalues%3AList((id%3A4%2Ctext%3ASoftware%2520Development%2CselectionType%3AINCLUDED)))%2C(type%3AREGION%2Cvalues%3AList((id%3A102221843%2Ctext%3ANorth%2520America%2CselectionType%3AINCLUDED)%2C(id%3A100506914%2Ctext%3AEurope%2CselectionType%3AINCLUDED)%2C(id%3A91000007%2Ctext%3AEMEA%2CselectionType%3AINCLUDED)))%2C(type%3AFUNCTION%2Cvalues%3AList((id%3A4%2Ctext%3ABusiness%2520Development%2CselectionType%3AINCLUDED)%2C(id%3A25%2Ctext%3ASales%2CselectionType%3AINCLUDED)%2C(id%3A21%2Ctext%3APurchasing%2CselectionType%3AINCLUDED)%2C(id%3A15%2Ctext%3AMarketing%2CselectionType%3AINCLUDED)))))&sessionId=bM%2FlCi1xTF%2B0Nd5wX3cu4g%3D%3D&viewAllFilters=true",
+  "listName": "sdfwe",
+  "timestamp": "20260119_231231",
+  "fileName": "sdfwe_20260119_231231.csv",
+  "filePath": "D:\\sales-nav-helper-improved-without_enricher\\data\\sdfwe_20260119_231231.csv",
+  "pageIndex": 5,
+  "totalRows": 150,
+  "totalContacts": 100,
+  "state": "paused",
+  "currentUrl": "https://www.linkedin.com/sales/search/people?page=5&query=(recentSearchParam%3A(id%3A5172542458%2CdoLogHistory%3Atrue)%2Cfilters%3AList((type%3AINDUSTRY%2Cvalues%3AList((id%3A4%2Ctext%3ASoftware%2520Development%2CselectionType%3AINCLUDED)))%2C(type%3AREGION%2Cvalues%3AList((id%3A102221843%2Ctext%3ANorth%2520America%2CselectionType%3AINCLUDED)%2C(id%3A100506914%2Ctext%3AEurope%2CselectionType%3AINCLUDED)%2C(id%3A91000007%2Ctext%3AEMEA%2CselectionType%3AINCLUDED)))%2C(type%3AFUNCTION%2Cvalues%3AList((id%3A4%2Ctext%3ABusiness%2520Development%2CselectionType%3AINCLUDED)%2C(id%3A25%2Ctext%3ASales%2CselectionType%3AINCLUDED)%2C(id%3A21%2Ctext%3APurchasing%2CselectionType%3AINCLUDED)%2C(id%3A15%2Ctext%3AMarketing%2CselectionType%3AINCLUDED)))))&sessionId=bM%2FlCi1xTF%2B0Nd5wX3cu4g%3D%3D&viewAllFilters=true"
+}

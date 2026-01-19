@@ -1,0 +1,13 @@
+{
+  "id": "sdfsdf_20260117_115026",
+  "url": "https://www.linkedin.com/sales/search/people?query=(recentSearchParam%3A(doLogHistory%3Atrue)%2Cfilters%3AList((type%3ACOMPANY_HEADCOUNT%2Cvalues%3AList((id%3AB%2Ctext%3A1-10%2CselectionType%3AINCLUDED)))))&sessionId=Smc6tGxxSzCNd%2F1NGonEuw%3D%3D&viewAllFilters=true",
+  "listName": "sdfsdf",
+  "timestamp": "20260117_115026",
+  "fileName": "sdfsdf_20260117_115026.csv",
+  "filePath": "D:\\sales-nav-helper-improved-without_enricher\\data\\sdfsdf_20260117_115026.csv",
+  "pageIndex": 2,
+  "totalRows": 25,
+  "totalContacts": 25,
+  "state": "running",
+  "currentUrl": "https://www.linkedin.com/sales/search/people?page=3&query=(recentSearchParam%3A(id%3A5168493642%2CdoLogHistory%3Atrue)%2Cfilters%3AList((type%3ACOMPANY_HEADCOUNT%2Cvalues%3AList((id%3AB%2Ctext%3A1-10%2CselectionType%3AINCLUDED)))))&sessionId=Smc6tGxxSzCNd%2F1NGonEuw%3D%3D&viewAllFilters=true"
+}

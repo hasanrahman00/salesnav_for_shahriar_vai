@@ -1,0 +1,13 @@
+{
+  "id": "sdf_20251006_182524",
+  "url": "https://www.linkedin.com/sales/search/people?query=(recentSearchParam%3A(id%3A5139434588%2CdoLogHistory%3Atrue)%2Cfilters%3AList((type%3ACOMPANY_HEADCOUNT%2Cvalues%3AList((id%3AA%2Ctext%3ASelf-employed%2CselectionType%3AINCLUDED)))%2C(type%3AFOLLOWS_YOUR_COMPANY%2Cvalues%3AList((id%3ACF%2CselectionType%3AINCLUDED)))))&sessionId=8NTFRKjpQgydkg7mgZ9kKw%3D%3D&viewAllFilters=true",
+  "listName": "sdf",
+  "timestamp": "20251006_182524",
+  "fileName": "sdf_20251006_182524.csv",
+  "filePath": "D:\\sales-nav-helper-improved-without_enricher\\data\\sdf_20251006_182524.csv",
+  "pageIndex": 14,
+  "totalRows": 350,
+  "totalContacts": 350,
+  "state": "paused",
+  "currentUrl": "https://www.linkedin.com/sales/search/people?page=14&query=(recentSearchParam%3A(id%3A5139434588%2CdoLogHistory%3Atrue)%2Cfilters%3AList((type%3ACOMPANY_HEADCOUNT%2Cvalues%3AList((id%3AA%2Ctext%3ASelf-employed%2CselectionType%3AINCLUDED)))%2C(type%3AFOLLOWS_YOUR_COMPANY%2Cvalues%3AList((id%3ACF%2Ctext%3AFollowing%2520your%2520company%2CselectionType%3AINCLUDED)))))&sessionId=8NTFRKjpQgydkg7mgZ9kKw%3D%3D&viewAllFilters=true"
+}
