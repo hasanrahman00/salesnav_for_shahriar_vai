@@ -62,9 +62,11 @@ async function mergeContactDomainsByNamePriority(opts) {
     if (first) pushIdx(idxFirst, first, p);
     if (last) pushIdx(idxLast, last, p);
   }
-  // Ensure `domain` column exists on every row
-  ensureDomainHeader(rows);
-  const hget = mkHeaderGetter(Object.keys(rows[0] || {}));
+  const headers = Object.keys(rows[0] || {});
+  const websiteKey = pickWebsiteHeader(headers);
+  // Ensure the chosen Website/domain column exists on every row
+  ensureWebsiteHeader(rows, websiteKey);
+  const hget = mkHeaderGetter(headers);
   let updated = 0;
   for (const row of rows) {
     const fullName = hget(row, 'fullname') ?? hget(row, 'name') ?? hget(row, 'full_name') ?? hget(row, 'full name');
@@ -80,7 +82,8 @@ async function mergeContactDomainsByNamePriority(opts) {
     if (!match || !Array.isArray(match.domains) || match.domains.length === 0) continue;
     // Use only the first business domain
     const [d = ''] = match.domains;
-    if (overwrite || !row.domain) row.domain = d;
+    const k = websiteKey || 'Website';
+    if (overwrite || !row[k]) row[k] = d;
     // If legacy domain1/domain2/domain3 columns exist, clear them
     if ('domain1' in row) row.domain1 = '';
     if ('domain2' in row) row.domain2 = '';
@@ -92,8 +95,8 @@ async function mergeContactDomainsByNamePriority(opts) {
     await fs.writeFile(baseCsvPath + '.bak', raw);
   }
   // Write back the CSV
-  const headers = Object.keys(rows[0] || {});
-  const csv = stringify(rows, { header: true, columns: headers, bom: true });
+  const outHeaders = Object.keys(rows[0] || {});
+  const csv = stringify(rows, { header: true, columns: outHeaders, bom: true });
   await fs.writeFile(outPath, csv);
   console.log(`[MERGE] Updated ${updated}/${rows.length} rows -> ${outPath}`);
   return { updated, total: rows.length, outPath };
@@ -115,10 +118,19 @@ function pushIdx(map, key, v) {
 function pickUnique(arr) {
   return Array.isArray(arr) && arr.length === 1 ? arr[0] : null;
 }
-function ensureDomainHeader(rows) {
+function pickWebsiteHeader(headers) {
+  const list = Array.isArray(headers) ? headers : [];
+  const byLower = new Map(list.map((h) => [String(h).toLowerCase(), h]));
+  if (byLower.has('website')) return byLower.get('website');
+  if (byLower.has('domain')) return byLower.get('domain');
+  return null;
+}
+
+function ensureWebsiteHeader(rows, websiteKey) {
   if (!rows.length) return;
+  const k = websiteKey || 'Website';
   for (const r of rows) {
-    if (!Object.prototype.hasOwnProperty.call(r, 'domain')) r['domain'] = '';
+    if (!Object.prototype.hasOwnProperty.call(r, k)) r[k] = '';
   }
 }
 function mkHeaderGetter(headers) {

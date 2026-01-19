@@ -14,8 +14,8 @@ const readline = require('readline');
 // Base columns from SignalHire (use snake_case for names and domain)
 const BASE_COLUMNS = [
   { key: 'name', header: 'Name' },
-  { key: 'first_name', header: 'first_name' },
-  { key: 'last_name', header: 'last_name' },
+  { key: 'first_name', header: 'First Name' },
+  { key: 'last_name', header: 'Last Name' },
   { key: 'title', header: 'Title' },
   { key: 'company', header: 'Company' },
   { key: 'person_location', header: 'Location' },
@@ -23,7 +23,7 @@ const BASE_COLUMNS = [
 ];
 // Column variants
 // Include a single `domain` column instead of domain1/domain2/domain3.
-const EXT_DOMAIN = [...BASE_COLUMNS, { key: 'domain', header: 'domain' }];
+const EXT_DOMAIN = [...BASE_COLUMNS, { key: 'domain', header: 'Website' }];
 const EXT_DOMAIN_EMAIL = [...EXT_DOMAIN, { key: 'Email', header: 'Email' }];
 const EXT_EMAIL = [...BASE_COLUMNS, { key: 'Email', header: 'Email' }];
 
@@ -51,7 +51,7 @@ async function readHeaderLine(filePath) {
 function chooseColumnsForExistingHeader(headerLine) {
   const lc = (headerLine || '').toLowerCase();
   // Determine whether an existing file has a domain column or old domain1/domain2 columns
-  const hasDomain = lc.includes('domain');
+  const hasDomain = lc.includes('domain') || lc.includes('website');
   const hasDomain1 = lc.includes('domain1');
   const hasDomain2 = lc.includes('domain2');
   const hasEmail = lc.includes('email');
